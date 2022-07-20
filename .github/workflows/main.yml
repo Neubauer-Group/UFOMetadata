@@ -1,0 +1,101 @@
+name: Check new uploaded metadata
+
+on: pull_request
+
+jobs:
+  No_modified_files:
+    name: No modified files 
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+        continue-on-error: true
+      - name: check modified files
+        run: |
+          if [ ${{steps.files.outputs.modified}} == [] ]; then
+            echo 'No existing files are modified.'
+          else
+            echo ${{steps.files.outputs.modified}}
+            echo 'Existing files should not be modified'
+            exit 125
+          fi
+
+  no_renamed_files:
+    name: No renamed files 
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+        continue-on-error: true
+      - name: check renamed files
+        run: |
+          if [ ${{steps.files.outputs.renamed}} == [] ]; then
+            echo 'No existing files are renamed.'
+          else
+            echo ${{steps.files.outputs.renamed}}
+            echo 'Existing files should not be renamed'
+            exit 125
+          fi
+          
+  no_removed_files:
+    name: No removed files 
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+        continue-on-error: true
+      - name: check removed files
+        run: |
+          if [ ${{steps.files.outputs.removed}} == [] ]; then
+            echo 'No existing files are removed.'
+          else
+            echo ${{steps.files.outputs.removed}}
+            echo 'Existing files should not be removed'
+            exit 125
+          fi
+
+  check_added_files:
+    name: Check added files
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
+        continue-on-error: true
+      - name: Find added files
+        run: |
+          echo ${{steps.files.outputs.added}}
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+      - name: Install Independencies and run the test
+        run: |
+          python3 -m venv venv
+          . venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          python metadata_upload_test.py ${{steps.files.outputs.added}}
+
+  merge:
+    needs: [No_modified_files,no_renamed_files,no_removed_files,check_added_files]
+    name: merge
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: merge
+      uses: mtanzi/action-automerge@v1
+      id: merge
+      with:
+        github_token: ${{ secrets.Access_Token }}
+        source: 'upload'
+        target: 'main' 
