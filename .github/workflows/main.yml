@@ -3,7 +3,7 @@ name: Check new uploaded metadata
 on: pull_request
 
 jobs:
-  no_modified_files:
+  No_modified_files:
     name: No modified files 
     runs-on: ubuntu-latest
     steps:
@@ -84,18 +84,3 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           python metadata_upload_test.py ${{steps.files.outputs.added}}
-
-  merge:
-    needs: [no_modified_files,no_renamed_files,no_removed_files,check_added_files]
-    name: merge
-    runs-on: ubuntu-latest
-    steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: merge
-      uses: mtanzi/action-automerge@v1
-      id: merge
-      with:
-        github_token: ${{ secrets.Access_Token }}
-        source: 'upload'
-        target: 'main' 
