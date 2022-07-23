@@ -8,13 +8,22 @@
     "Paper_id": {
         "doi" : "Digital Object Identifier",
         "arXiv" : "arXiv Identifier",
-        "comment (Don't need to include)": "You can use any identifier, but the form should be maintained so that python can read it as a dictionary."
+        "comment (Don't include)": "You can use any identifier, but the form should be maintained so that python can read it as a dictionary."
     },
     "Description": "Write your description of your model here.",
     "Model name" : "Name of your UFO model",
     "Model Doi" : "DOI of your model files, we encourage you to upload your model to Zenodo. Other organizations's DOI may not be downlable for now.",
     "Model Version" : "This part won't be checked, but we strongly encourage you to include it.",
     "Model Python Version" : "Python version you used when develop your model, just 2 or 3",
+    "All Particles": {
+        "particle name1" : "corresponding pdg code, this input should be integer.",
+        "particle name2" : "corresponding pdg code, this input should be integer.",
+        "Comment (Don't include)": "For all particles, the key-value form should be kept in order to be readable by python."
+    },
+    "New elementary particles": {
+        "new elementary particle 1": "new pdg code for this particle, this input should be integer",
+        "new elementary particle 2": "new pdg code for this particle, this input should be integer"
+    },
     "Number of parameters": "Number of parameters defined in your parameters.py, this input should be integer.",
     "Number of vertices": "Number of vertices defined in your vertices.py, this input should be integer.",
     "Number of coupling orders": "Number of coupling orders defined in your coupling_orders.py, this input should be integer.",
