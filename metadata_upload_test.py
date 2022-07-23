@@ -15,7 +15,7 @@ else:
     # List of keys in metadata file
     Neccessary_Model_Information_Keys = ['Author','Paper_id','Description','Model name','Model Doi']
     Neccessary_Model_related_Keys = ['Number of parameters','Number of vertices','Number of coupling orders','Number of coupling tensors','Number of lorentz tensors']
-    Model_Related_Keys = ['Number of parameters','Number of vertices','Number of coupling orders','Number of coupling tensors','Number of lorentz tensors','Number of Propagators','Number of Decays']
+    Model_Related_Keys = ['Number of parameters','Number of vertices','Number of coupling orders','Number of coupling tensors','Number of lorentz tensors','Number of propagators','Number of decays']
 
     # Read .json as dictionary in python
     with open(newmetadata) as metadata:
