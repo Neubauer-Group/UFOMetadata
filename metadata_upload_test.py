@@ -25,6 +25,11 @@ else:
     for i in Neccessary_Model_Information_Keys:
         assert newfile[i]
     
+    # Check contents in Author
+    for i in newfile['Author']:
+        assert i['affiliation']
+        assert i['name']
+
     # Check if Doi exists
     url = 'https://doi.org/' + newfile['Model Doi']
     zenodo_webpage = requests.get(url)
