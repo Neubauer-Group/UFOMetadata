@@ -6,23 +6,28 @@
   "Author": [
     {
       "affiliation": "Theory Division, Saha Institute of Nuclear Physics", 
-      "name": "Goutam Das"
+      "name": "Goutam Das",
+      "contact": "gkdgoutam@…"
     }, 
     {
       "affiliation": "IPPP,Durham University", 
-      "name": "Céline Degrande"
+      "name": "Céline Degrande",
+      "contact": "celine.degrande@…"
     }, 
     {
       "affiliation": "SLAC", 
-      "name": "Valentin Hirschi"
+      "name": "Valentin Hirschi",
+      "contact": "valentin.hirschi@…"
     }, 
     {
       "affiliation": "UCL", 
-      "name": "Fabio Maltoni"
+      "name": "Fabio Maltoni",
+      "contact" : "fabio.maltoni@…"
     }, 
     {
       "affiliation": "CERN", 
-      "name": "Hua-Sheng Shao"
+      "name": "Hua-Sheng Shao",
+      "contact": "huasheng.shao@…"
     }
   ], 
   "New elementary particles": {
