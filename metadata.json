@@ -31,7 +31,7 @@
     "Number of coupling orders": "Number of coupling orders defined in your coupling_orders.py, this input should be integer.",
     "Number of coupling tensors": "Number of coupling tensors defined in your couplings.py, this input should be integer.",
     "Number of lorentz tensors": "Number of lorentz tensors defined in your lorentz.py, this input should be integer.",
-    "Number of propagators": "Number of propagators defined in your propagators.py, this input should be integer.",
-    "Number of decays": "Number of decays defined in your decays.py, this input should be integer."
+    "Number of propagators(Optional)": "Number of propagators defined in your propagators.py, this input should be integer.",
+    "Number of decays(Optional)": "Number of decays defined in your decays.py, this input should be integer."
 }
 
