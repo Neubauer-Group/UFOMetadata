@@ -18,7 +18,7 @@ else:
     Model_Related_Keys = ['Number of parameters','Number of vertices','Number of coupling orders','Number of coupling tensors','Number of lorentz tensors','Number of propagators','Number of decays']
 
     # Read .json as dictionary in python
-    with open(newmetadata) as metadata:
+    with open(newmetadata,encoding='utf-8') as metadata:
         newfile = json.load(metadata)
     
     # Check necessary contents
@@ -57,7 +57,7 @@ else:
     if existingfilelist != []:
         # Open .json as dictionary in python
         for jsonfile in existingfilelist:
-            with open(jsonfile) as metadata:
+            with open(jsonfile,encoding='utf-8') as metadata:
                 existingfile = json.load(metadata)
 
             # Ready for check particles defined in the model
