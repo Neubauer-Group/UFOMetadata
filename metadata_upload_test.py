@@ -29,6 +29,7 @@ else:
     for i in newfile['Author']:
         assert i['affiliation']
         assert i['name']
+        assert i['contact']
 
     # Check if Doi exists
     url = 'https://doi.org/' + newfile['Model Doi']
@@ -76,7 +77,8 @@ else:
                     for i in existing_keys:
                         existing_dic[i] = existingfile[i]
                     if new_dic == existing_dic:
-                        raise Exception('Your new uploaded metadata may be the same as %s.' %(jsonfile))
+                        if newfile['Model Version'] == existingfile['Model Version']:
+                            raise Exception('Your new uploaded metadata may be the same as %s.' %(jsonfile))
 
     print('You have successfully upload metadata for your model!')
         
