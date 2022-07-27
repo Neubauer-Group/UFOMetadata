@@ -15,7 +15,7 @@
     "Description": "Write your description of your model here.",
     "Model name" : "Name of your UFO model",
     "Model Doi" : "DOI of your model files, we encourage you to upload your model to Zenodo. Other organizations's DOI may not be downlable for now.",
-    "Model Version" : "This part won't be checked, but we strongly encourage you to include it.",
+    "Model Version" : "Your Model Version",
     "Model Python Version" : "Python version you used when develop your model, just 2 or 3",
     "All Particles": {
         "particle name1" : "corresponding pdg code, this input should be integer.",
