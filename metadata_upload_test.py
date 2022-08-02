@@ -26,10 +26,12 @@ else:
         assert newfile[i]
     
     # Check contents in Author
+    all_contact = []
     for i in newfile['Author']:
-        assert i['affiliation']
         assert i['name']
-        assert i['contact']
+        if 'contact' in i:
+           all_contact.append(i['contact']) 
+    assert all_contact != []
 
     # Check if Doi exists
     url = 'https://doi.org/' + newfile['Model Doi']
