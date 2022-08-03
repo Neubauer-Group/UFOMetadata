@@ -1,5 +1,5 @@
 
-import os, sys, json,requests
+import os, sys, json,requests,time
 
 if len(sys.argv) == 1:
     sys.exit()
@@ -32,11 +32,6 @@ else:
         if 'contact' in i:
            all_contact.append(i['contact']) 
     assert all_contact != []
-
-    # Check if Doi exists
-    url = 'https://doi.org/' + newfile['Model Doi']
-    zenodo_webpage = requests.get(url)
-    assert zenodo_webpage.status_code < 400
 
     # Check model related contents
     for i in Neccessary_Model_related_Keys:
@@ -81,6 +76,13 @@ else:
                     if new_dic == existing_dic:
                         if newfile['Model Version'] == existingfile['Model Version']:
                             raise Exception('Your new uploaded metadata may be the same as %s.' %(jsonfile))
+
+    # Check if Doi exists
+    # Wait for 5 minutes for DOI paga
+    time.stop(300)
+    url = 'https://doi.org/' + newfile['Model Doi']
+    zenodo_webpage = requests.get(url)
+    assert zenodo_webpage.status_code < 400
 
     print('You have successfully upload metadata for your model!')
         
