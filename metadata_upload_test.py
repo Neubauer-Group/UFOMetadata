@@ -79,7 +79,7 @@ else:
 
     # Check if Doi exists
     # Wait for 5 minutes for DOI paga
-    time.stop(300)
+    time.sleep(300)
     url = 'https://doi.org/' + newfile['Model Doi']
     zenodo_webpage = requests.get(url)
     assert zenodo_webpage.status_code < 400
