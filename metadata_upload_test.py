@@ -9,7 +9,6 @@ else:
     fullpath = sys.argv[1]
     newmetadata = fullpath.split('/')[-1]
     path = os.path.dirname(os.path.realpath(fullpath))
-    print(path)
     os.chdir(path)
     filelist = os.listdir()
 
