@@ -82,7 +82,7 @@ else:
         DOI_list.append(newfile['Model Doi'])
 
     # Check if Doi exists
-    # Wait for 5 minutes for DOI paga
+    # Wait for 5 minutes for DOI page
     time.sleep(300)
     for i in DOI_list:
         url = 'https://doi.org/' + i
