@@ -13,7 +13,7 @@
     }
   ], 
   "Number of decays": 10, 
-  "Model name": "VLQ UFO model at NLO QCD", 
+  "Model name": "VLQ UFO model at NLO QCD with 4FS", 
   "Number of coupling orders": 3, 
   "Number of coupling tensors": 97, 
   "Description": "Vector-like Quark UFO Model at NLO QCD with four flavour scheme", 
