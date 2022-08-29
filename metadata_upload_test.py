@@ -32,11 +32,11 @@ else:
             assert newfile[i]
 
         try:
-            assert file['Author']
+            assert newfile['Author']
         except:
             raise Exception(colored('"Author" field does not exist in metadata', 'red'))
         all_contact = []
-        for i in file['Author']:
+        for i in newfile['Author']:
             try:
                 assert i['name'].strip()
             except:
