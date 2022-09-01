@@ -16,6 +16,7 @@
     "Description": "Write your description of your model here.",
     "Model name" : "Name of your UFO model",
     "Model Doi" : "DOI of your model files, we encourage you to upload your model to Zenodo. Other organizations's DOI may not be downlable for now.",
+    "Existing Model Doi" : "Add this key-value pair if this metadata is a new version of existing,registered model",
     "Model Version" : "Your Model Version",
     "Model Python Version" : "Python version you used when develop your model, just 2 or 3",
     "All Particles": {
