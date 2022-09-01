@@ -27,6 +27,16 @@ else:
         with open(newmetadata,encoding='utf-8') as metadata:
             newfile = json.load(metadata)
         
+        # Check whether a new version
+        if '.V' in newmetadata:
+            assert newfile['Existing Model Doi']
+            url = 'https://doi.org/' + file['Existing Model Doi']
+            existing_model_webpage = requests.get(url)
+            try:
+                assert existing_model_webpage.status_code < 400
+            except:
+                raise Exception(colored('We cannot find your model page with your provided existing model doi.', 'red'))
+                
         # Check necessary contents
         for i in Neccessary_Model_Information_Keys:
             assert newfile[i]
