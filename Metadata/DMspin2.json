@@ -90,8 +90,8 @@
     "mu+": -13
   }, 
   "Paper_id": {
-    "doi": "https://doi.org/10.1016/j.physletb.2017.05.007" 
-    
+    "doi": "https://doi.org/10.1016/j.physletb.2017.05.007",
+    "arXiv": "1605.09359"
   }, 
   "Number of coupling orders": 3, 
   "Number of vertices": 244, 
