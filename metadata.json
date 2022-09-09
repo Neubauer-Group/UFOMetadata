@@ -18,7 +18,7 @@
     "Model Doi" : "DOI of your model files, we encourage you to upload your model to Zenodo. Other organizations's DOI may not be downlable for now.",
     "Existing Model Doi" : "Add this key-value pair if this metadata is a new version of existing,registered model",
     "Model Version" : "Your Model Version",
-    "Model Python Version" : "Python version you used when develop your model, just 2 or 3",
+    "Model Python Version" : "Python2 or Python3",
     "All Particles": {
         "particle name1" : "corresponding pdg code, this input should be integer.",
         "particle name2" : "corresponding pdg code, this input should be integer.",
