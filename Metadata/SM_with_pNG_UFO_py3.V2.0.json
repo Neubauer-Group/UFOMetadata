@@ -9,7 +9,7 @@
   "Paper_id": {
     "arXiv": "1912.04008"
   },
-  "Description": "pseudo-Nambu-Goldstone (pNG) dark matter in a complex scalar singlet model with a softly broken global U(1) symmetry",
+  "Description": "pseudo-Nambu-Goldstone (pNG) dark matter in a complex scalar singlet model with a softly broken global U(1) symmetry. Python3 compatible version",
   "Existing Model Doi": "10.5281/zenodo.7065995",
   "Model name": "pseudo-Nambu-Goldstone (pNG) Dark Matter",
   "Model Doi": "10.5281/zenodo.7066011",
