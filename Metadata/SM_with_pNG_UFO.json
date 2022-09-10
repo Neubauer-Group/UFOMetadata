@@ -11,7 +11,7 @@
   "Model name": "pseudo-Nambu-Goldstone (pNG) Dark Matter", 
   "Number of coupling orders": 2, 
   "Number of coupling tensors": 81, 
-  "Description": "pseudo-Nambu-Goldstone (pNG) dark matter in a complex scalar singlet model with a softly broken global U(1) symmetry", 
+  "Description": "pseudo-Nambu-Goldstone (pNG) dark matter in a complex scalar singlet model with a softly broken global U(1) symmetry. Python2 compatible version", 
   "New elementary particles": {
     "~X": 30, 
     "h2": 29, 
