@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/516074861.svg)](https://zenodo.org/badge/latestdoi/516074861)
+
 # UFOMetadata
 This repository is used for preservation of metadata files of UFO models created by the [UFOManager](https://github.com/Neubauer-Group/UFOManager) package.
 
