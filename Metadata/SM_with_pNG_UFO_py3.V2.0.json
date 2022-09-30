@@ -12,6 +12,7 @@
   "Description": "pseudo-Nambu-Goldstone (pNG) dark matter in a complex scalar singlet model with a softly broken global U(1) symmetry. Python3 compatible version",
   "Existing Model Doi": "10.5281/zenodo.7065995",
   "Model name": "pseudo-Nambu-Goldstone (pNG) Dark Matter",
+  "Model Homepage" : "https://feynrules.irmp.ucl.ac.be/wiki/pNG#no1",
   "Model Doi": "10.5281/zenodo.7066011",
   "Model Version": "2.0",
   "Model Python Version": 3,

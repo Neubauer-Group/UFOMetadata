@@ -1,4 +1,5 @@
 {
+  "Model Homepage" : "http://feynrules.irmp.ucl.ac.be/wiki/Spin2",
   "Model Doi": "10.5281/zenodo.6908818", 
   "Number of coupling tensors": 168, 
   "Description": "The model contains a spin-2 field and its interactions with the SM fields through dimension-5 operators. The UFO model can be used for computation at the NLO in QCD.", 
