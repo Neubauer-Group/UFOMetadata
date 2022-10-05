@@ -10,6 +10,7 @@ else:
     All_added_files = sys.argv[1]
     File_list = All_added_files.split(',')
     DOI_list = []
+    Homepage_list = []
     os.chdir('/home/runner/work/UFOMetadata/UFOMetadata/Metadata')
 
     regex = r'[^@]+@[^@]+\.[^@]+'
@@ -116,6 +117,7 @@ else:
                                 
 
         DOI_list.append(newfile['Model Doi'])
+        Homepage_list.append(newfile['Model Homepage'])
 
     # Check if all DOIs unique
     assert len(DOI_list) == len(set(DOI_list))
@@ -127,6 +129,11 @@ else:
         url = 'https://doi.org/' + i
         zenodo_webpage = requests.get(url)
         assert zenodo_webpage.status_code < 400
+    
+    # Check if Model Homepage exists
+    for i in Homepage_list:
+        homepage_webpage = requests.get(i)
+        assert homepage_webpage.status_code < 400
 
     print('You have successfully upload metadata for your model!')
         
