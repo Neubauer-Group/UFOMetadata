@@ -1,5 +1,4 @@
 {
-  "Model Homepage" : "https://feynrules.irmp.ucl.ac.be/wiki/NLOModels",
   "Model Doi": "10.5281/zenodo.6991112", 
   "Author": [
     {
@@ -8,23 +7,54 @@
       "name": "Benjamin Fuks"
     }
   ], 
+  "SM particles": {
+    "ve": 12, 
+    "vm": 14, 
+    "vm~": -14, 
+    "vt": 16, 
+    "c~": -4, 
+    "t~": -6, 
+    "ve~": -12, 
+    "s~": -3, 
+    "vt~": -16, 
+    "e-": 11, 
+    "e+": -11, 
+    "H": 25, 
+    "d~": -1, 
+    "u~": -2, 
+    "ta-": 15, 
+    "b~": -5, 
+    "Z": 23, 
+    "ta+": -15, 
+    "a": 22, 
+    "c": 4, 
+    "b": 5, 
+    "d": 1, 
+    "g": 21, 
+    "W-": -24, 
+    "W+": 24, 
+    "s": 3, 
+    "u": 2, 
+    "t": 6, 
+    "mu-": 13, 
+    "mu+": -13
+  }, 
   "Number of decays": 7, 
-  "Model name": "UFO for NLO predictions for sgluon pair production", 
+  "Model name": "UFO model for NLO predictions for sgluon pair production", 
   "Number of coupling orders": 3, 
-  "Number of coupling tensors": 92, 
+  "Allows NLO calculations": true, 
+  "Model Python Version": 2, 
   "Description": "Inclusive sgluon pair production", 
-  "New elementary particles": {
-    "sig8": 9000001, 
+  "BSM particles with standard PDG codes": {
     "G-": -251, 
-    "G+": 251, 
-    "G0": 250
+    "G+": 251
   }, 
   "Number of lorentz tensors": 61, 
   "Number of parameters": 75, 
+  "Model Homepage": "https://feynrules.irmp.ucl.ac.be/wiki/NLOModels", 
   "All Particles": {
     "ve": 12, 
-    "ghG~": -82, 
-    "u~": -2, 
+    "vm": 14, 
     "vm~": -14, 
     "vt": 16, 
     "c~": -4, 
@@ -32,8 +62,6 @@
     "t~": -6, 
     "G0": 250, 
     "ve~": -12, 
-    "ghWm": 9000004, 
-    "ghWp": 9000003, 
     "G-": -251, 
     "ta+": -15, 
     "G+": 251, 
@@ -41,37 +69,42 @@
     "e-": 11, 
     "e+": -11, 
     "H": 25, 
-    "ghZ": 9000002, 
-    "vm": 14, 
     "d~": -1, 
-    "mu-": 13, 
-    "ghG": 82, 
-    "ghA": 9000005, 
+    "u~": -2, 
     "sig8": 9000001, 
     "b~": -5, 
     "Z": 23, 
-    "ghZ~": -9000002, 
     "s~": -3, 
     "a": 22, 
     "c": 4, 
     "b": 5, 
     "d": 1, 
     "g": 21, 
-    "ghWm~": -9000004, 
     "W-": -24, 
-    "ghWp~": -9000003, 
     "W+": 24, 
     "s": 3, 
     "u": 2, 
     "t": 6, 
-    "ghA~": -9000005, 
+    "mu-": 13, 
     "mu+": -13
   }, 
   "Paper_id": {
     "arXiv": "1412.5589"
   }, 
   "Number of vertices": 142, 
-  "Model Python Version": 2, 
+  "Number of coupling tensors": 92, 
+  "Particles with PDG-like IDs": {
+    "sig8": {
+      "charge": 0.0, 
+      "spin": 1, 
+      "id": 9000001
+    }, 
+    "G0": {
+      "charge": 0.0, 
+      "spin": 1, 
+      "id": 250
+    }
+  }, 
   "Model Version": "1.0", 
   "Number of propagators": 4
 }
