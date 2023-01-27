@@ -155,37 +155,40 @@ else:
 
             # Check other particle-related keys                       
             if 'SM particles' in newfile:
-                wrong_SM_particle = []
-                for i in newfile['SM particles']:
-                    if PDGID(newfile['SM particles'][i]).is_valid == False:
-                        wrong_SM_particle.append(i)
-                    if PDGID(newfile['SM particles'][i]).is_sm_quark != True and PDGID(newfile['SM particles'][i]).is_sm_lepton != True and PDGID(newfile['SM particles'][i]).is_sm_gauge_boson_or_higgs != True:
-                        wrong_SM_particle.append(i)
-                
-                if len(wrong_SM_particle) != 0:
-                    raise Exception(colored("Particle %s in your 'SM particles' key is not SM particles" %wrong_SM_particle, 'red'))
+                if len(newfile['SM particles'].keys()) != 0:
+                    wrong_SM_particle = []
+                    for i in newfile['SM particles']:
+                        if PDGID(newfile['SM particles'][i]).is_valid == False:
+                            wrong_SM_particle.append(i)
+                        if PDGID(newfile['SM particles'][i]).is_sm_quark != True and PDGID(newfile['SM particles'][i]).is_sm_lepton != True and PDGID(newfile['SM particles'][i]).is_sm_gauge_boson_or_higgs != True:
+                            wrong_SM_particle.append(i)
+                    
+                    if len(wrong_SM_particle) != 0:
+                        raise Exception(colored("Particle %s in your 'SM particles' key is not SM particles" %wrong_SM_particle, 'red'))
 
             if 'BSM particles with standard PDG codes' in newfile:
-                wrong_BSM_particle = []
-                for i in newfile['BSM particles with standard PDG codes']:
-                    if PDGID(newfile['BSM particles with standard PDG codes'][i]).is_valid == False:
-                        wrong_BSM_particle.append(i)
-                    if PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_quark == True or PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_lepton == True or PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_gauge_boson_or_higgs == True:
-                        wrong_BSM_particle.append(i)
+                if len(newfile['BSM particles with standard PDG codes'].keys()) != 0:
+                    wrong_BSM_particle = []
+                    for i in newfile['BSM particles with standard PDG codes']:
+                        if PDGID(newfile['BSM particles with standard PDG codes'][i]).is_valid == False:
+                            wrong_BSM_particle.append(i)
+                        if PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_quark == True or PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_lepton == True or PDGID(newfile['BSM particles with standard PDG codes'][i]).is_sm_gauge_boson_or_higgs == True:
+                            wrong_BSM_particle.append(i)
 
-                if len(wrong_BSM_particle) != 0:
-                    raise Exception(colored("Particle %s in your 'BSM particles with standard PDG codes' key are not BSM particles or are not registered by Particle Data Group" %wrong_BSM_particle, 'red'))
+                    if len(wrong_BSM_particle) != 0:
+                        raise Exception(colored("Particle %s in your 'BSM particles with standard PDG codes' key are not BSM particles or are not registered by Particle Data Group" %wrong_BSM_particle, 'red'))
 
             if 'Particles with PDG-like IDs' in newfile:
-                wrong_pdglike_particles = []
-                for i in newfile['Particles with PDG-like IDs']:
-                    if PDGID(newfile['Particles with PDG-like IDs'][i]['id']).is_valid == True:
-                        if newfile['Particles with PDG-like IDs'][i]['spin'] == PDGID(newfile['Particles with PDG-like IDs'][i]['id']).j_spin:
-                            if int(round(newfile['Particles with PDG-like IDs'][i]['charge']*3)) == PDGID(newfile['Particles with PDG-like IDs'][i]['id']).three_charge:
-                                wrong_pdglike_particles.append(i)
-                
-                if len (wrong_pdglike_particles) != 0:
-                    raise Exception(colored("Particle %s in your 'Particles with PDG-like IDs' key are registered by Particle Data Group" %wrong_pdglike_particles, 'red'))
+                if len(newfile['Particles with PDG-like IDs'].keys()) != 0:
+                    wrong_pdglike_particles = []
+                    for i in newfile['Particles with PDG-like IDs']:
+                        if PDGID(newfile['Particles with PDG-like IDs'][i]['id']).is_valid == True:
+                            if newfile['Particles with PDG-like IDs'][i]['spin'] == PDGID(newfile['Particles with PDG-like IDs'][i]['id']).j_spin:
+                                if int(round(newfile['Particles with PDG-like IDs'][i]['charge']*3)) == PDGID(newfile['Particles with PDG-like IDs'][i]['id']).three_charge:
+                                    wrong_pdglike_particles.append(i)
+                    
+                    if len (wrong_pdglike_particles) != 0:
+                        raise Exception(colored("Particle %s in your 'Particles with PDG-like IDs' key are registered by Particle Data Group" %wrong_pdglike_particles, 'red'))
         
         print('Check model-related information initial metadata:' + colored(' PASSED!', 'green'))
         DOI_list.append(newfile['Model Doi'])
