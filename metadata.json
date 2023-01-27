@@ -49,3 +49,5 @@
     "Number of decays": "Number of decays defined in your decays.py, this input should be integer. 0 if no decays defined"
 }
 
+{"Note": "Particles in 'BSM particles with standard PDG codes' should have valid pdg codes but not SM particles;
+          Particles in 'Particles with PDG-like IDs' should have invalid pdg code or have valid pdg code but different j_spin or three-charge value value with particle of same pdg code registered by Particle Data Group."}
