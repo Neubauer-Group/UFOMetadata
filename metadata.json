@@ -25,9 +25,20 @@
         "particle name2" : "corresponding pdg code, this input should be integer.",
         "Comment (Don't include)": "For all particles, the key-value form should be kept in order to be readable by python."
     },
-    "New elementary particles": {
-        "new elementary particle 1": "new pdg code for this particle, this input should be integer",
-        "new elementary particle 2": "new pdg code for this particle, this input should be integer"
+    "SM particles": {
+        "elementary particle 1": "pdg code for this particle, this input should be integer",
+        "elementary particle 2": "pdg code for this particle, this input should be integer"
+    },
+    "BSM particles with standard PDG codes": {
+        "BSM elementary particle 1": "pdg code for this particle, this input should be integer",
+        "BSM elementary particle 2": "pdg code for this particle, this input should be integer"
+    },
+    "Particles with PDG-like IDs":{
+        "particle 1": {
+            "charge" : "charge of the particle",
+            "spin" : "j_spin of the partile, which should be 2s+1",
+            "id" : "PDG-like code for this particle"
+        }
     },
     "Number of parameters": "Number of parameters defined in your parameters.py, this input should be integer.",
     "Number of vertices": "Number of vertices defined in your vertices.py, this input should be integer.",
@@ -38,3 +49,5 @@
     "Number of decays": "Number of decays defined in your decays.py, this input should be integer. 0 if no decays defined"
 }
 
+{"Note": "Particles in 'BSM particles with standard PDG codes' should have valid pdg codes but not SM particles;
+          Particles in 'Particles with PDG-like IDs' should have invalid pdg code or have valid pdg code but different j_spin or three-charge value value with particle of same pdg code registered by Particle Data Group."}
